@@ -9,7 +9,7 @@ public class SecretsBean {
     private String password;
 
     public String getPassword() {
-        return password;
+        return System.getProperty("super.secret");
     }
 
     public void setPassword(String password) {
