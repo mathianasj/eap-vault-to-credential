@@ -5,9 +5,10 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
-  <env-entry>
-    <env-entry-name>myEnvEntry</env-entry-name>
-    <env-entry-type>java.lang.String</env-entry-type>
-    <env-entry-value>${super.secret:notfound}</env-entry-value>
-  </env-entry>  
+  <resource-ref>
+    <description>DB Connection</description>
+    <res-ref-name>jboss/datasources/ExampleDS</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
 </web-app>

@@ -16,3 +16,9 @@ create-vault:
 
 configure-vault:
 	EAP_HOME=$$(pwd)/jboss-eap-7.4 && echo $$EAP_HOME && $$EAP_HOME/bin/vault.sh --keystore $$EAP_HOME/vault/vault.keystore --keystore-password vault22 --alias vault --vault-block vb --attribute password --sec-attr 0penS3sam3 --enc-dir $$EAP_HOME/vault/ --iteration 120 --salt 1234abcd
+
+load-data:
+	curl http://localhost:8080/eap-secrets-reader/services/hello/load
+
+test-endpoint:
+	curl http://localhost:8080/eap-secrets-reader/services/hello

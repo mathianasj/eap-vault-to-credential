@@ -13,3 +13,7 @@
 
 ## Convert vault to credentials store
 1. 
+
+## Run tests
+1. `make load-data`
+1. `make test-endpoint` and you should see Hello from DB: John.
